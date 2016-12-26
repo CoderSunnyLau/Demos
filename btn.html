@@ -2,8 +2,8 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <script src="https://libs.baidu.com/jquery/1.10.2/jquery.js"></script>
-    <title>Document</title>
+    <script src="jquery.min.js"></script>
+    <title>Water wave click</title>
     <style type="text/css">
         .btn{
             position:relative;
@@ -36,24 +36,28 @@
             height:30px;
             margin:0 auto;
         }
+        .button{
+            width:100%;
+            height:100%;
+            z-index:99;
+            position: relative;
+        }
     </style>
 </head>
 <body>
     <div class="btn">
-        button
+        <div class="button">button</div>
         <div class="circle"></div>
     </div>
     <script type="text/javascript">
         $(document).ready(function(){
             var x,y;
-            $('.btn').click(function(event){
+            $('.btn').mousedown(function(event){
                 x = event.offsetX + "px";
                 y = event.offsetY + "px";
                 $('.circle').stop();
-                $('.circle').css({'left':x,'top':y,'width':0,'height':0,'marginTop':0,'marginLeft':0,'opacity':0.5});
-                $('.circle').animate({'width':'160px','height':'160px','marginTop':'-80px','marginLeft':'-80px','opacity':0},500,function(){
-                    $(this).css({'width':0,'height':0,'marginTop':0,'marginLeft':0,'opacity':0.5});
-                });
+                $('.circle').css({'left':x,'top':y,'width':0,'height':0,'margin-top':0,'margin-left':0,'opacity':0.5});
+                $('.circle').animate({'width':'160px','height':'160px','marginTop':'-80px','marginLeft':'-80px','opacity':0},500);
             });
         });
     </script>
