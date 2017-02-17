@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<style type="text/css">
+		body,html{
+		}
+		*{
+			margin: 0;
+			padding:0;
+		}
+		li{
+			list-style-type: none;
+		}
+		#page-wrap{
+			width: 100%;
+			min-width: 980px;
+			overflow: hidden;
+			position: relative;
+		}
+		.header{
+			width: 100%;
+			height: 50px;
+			position: fixed;
+			top: 0;
+			z-index: 9;
+			background: url(http://file.ry600.com//snapshot/vms/site/di/di70684438lrfavs/du9sks0f7yefy23z/image//intro_headbg.jpg) repeat-x;
+		}
+		.header-cnt{
+			width: 980px;
+			height: 50px;
+			margin: 0 auto;
+		}
+		.ry-logo{
+			width: 131px;
+			height: 40px;
+			float: left;
+			background: url("http://bh.ry600.com/snapshot/vms/site/di/di70684438lrfavs/du9sks0f7yefy23z/image/ry_srch_crt.png") no-repeat 0 0;
+			border-right: 1px solid #CCC;
+			padding-right: 15px;
+			margin-top: 5px;
+			cursor: pointer;
+		}
+		.intro-logo{
+			width: 93px;
+			height: 40px;
+			float: left;
+			background: url(http://file.ry600.com//snapshot/vms/site/di/di70684438lrfavs/du9sks0f7yefy23z/image//intro_headtitle.png) no-repeat 15px 8px;
+			padding-left: 15px;
+			border-left: 1px solid #EEE;
+			margin-top: 5px;
+		}
+		.tel{
+			float: right;
+			width: 230px;
+			height: 30;
+			margin-top: 20px;
+		}
+		.tel-pic{
+			width:30px;
+			height:27px;
+			background: url(http://file.ry600.com//snapshot/vms/site/di/di70684438lrfavs/du9sks0f7yefy23z/image//intro0-2.png);
+			position: absolute;
+			margin-top: -5px;
+		}
+		.tel-num{
+			font-size: 15px;
+			font-family: "Microsoft YaHei";
+			color: #F50;
+			margin-left: 35px;
+		}
+		#items{
+			position: absolute;
+			width: 100%;
+		}
+		.item{
+			width: 100%;
+			height: 800px;
+			position: relative;
+			background-repeat:no-repeat;
+			background-position:center center;
+			background-size: cover;     
+			background-image:url(http://file.ry600.com//snapshot/vms/site/di/di70684438lrfavs/du9sks0f7yefy23z/image//intro_bg.png);
+		}
+		.odd{
+			background-color: pink;
+		}
+		.even{
+			background-color: #EEE;
+		}
+		.item_0{
+			background-image: url(http://file.ry600.com//snapshot/vms/site/di/di70684438lrfavs/du9sks0f7yefy23z/image//companyintroduction_01.jpg);
+			background-color: rgb(255,123,0);
+		}
+		.item_1{
+			background-color:rgb(239,150,46);
+		}
+		.item_2{
+			background-color:rgb(2,170,197);
+		}
+		.item_3{
+			background-color:rgb(243,114,74);
+		}
+		.item_4{
+			background-color:rgb(193,55,164);
+		}
+		.item_5{
+			background-color:rgb(150,186,18);
+		}
+		.item_6{
+			background-color:rgb(25,178,87);
+		}
+		.item_7{
+			background-color:rgb(215,99,210);
+		}
+		.item_8{
+			background-color:rgb(64,164,226);
+		}
+		.i_00_cnt{
+			width: 1720px;
+			height: 550px;
+			margin: -275px 0 0 -860px;
+			top: 50%;
+			left: 50%;
+			position: absolute;
+		}
+		.i_00{
+			/*width: 1720px;
+			height: 524px;*/
+			width: 851px;
+			height: 262px;
+			margin: 0 auto;
+			display: block;
+		}
+		.navs-entrance{
+			width: 980px;
+			height: 166px;
+			margin: 20px auto;
+			position: relative;
+		}
+		.nav-entrance{
+			position: absolute;
+		}
+		.nav-entrance>img{
+			/*width: 110px;
+			height: 166px;*/
+			width: 0;
+			height: 0;
+			margin-left: 55px;
+			margin-top: 83px;
+			cursor: pointer;
+		}
+		.nav-entrance_1{
+			margin: 30px 0 0 121px;
+		}
+		.nav-entrance_2{
+			margin: 60px 0 0 242px;
+		}
+		.nav-entrance_3{
+			margin: 90px 0 0 363px;
+		}
+		.nav-entrance_4{
+			margin: 90px 0 0 484px;
+		}
+		.nav-entrance_5{
+			margin: 60px 0 0 605px;
+		}
+		.nav-entrance_6{
+			margin: 30px 0 0 726px;
+		}
+		.nav-entrance_7{
+			margin: 0 0 0 847px;
+		}
+	</style>
+</head>
+<body>
+	<div id="page-wrap">
+		<div class="header">
+			<div class="header-cnt">
+				<a href="/_shop/storemap.shtml"><div class="ry-logo"></div></a>
+				<div class="intro-logo"></div>
+				<div class="tel"><div class="tel-pic"></div><span class="tel-num">服务热线：400-611-4016</span></div>
+			</div>
+		</div>
+		<ul id="items">
+			<li class="item item_0">
+				<div class="i_00_cnt">
+					<img class="i_00" src="http://file.ry600.com//snapshot/vms/site/di/di70684438lrfavs/du9sks0f7yefy23z/image//intro1-1.png"/>
+					<ul class="navs-entrance">
+						<li class="nav-entrance nav-entrance_0"><img src="http://file.ry600.com//snapshot/vms/site/di/di70684438lrfavs/du9sks0f7yefy23z/image//intro1-2.png"/></li>
+						<li class="nav-entrance nav-entrance_1"><img src="http://file.ry600.com//snapshot/vms/site/di/di70684438lrfavs/du9sks0f7yefy23z/image//intro1-3.png"/></li>
+						<li class="nav-entrance nav-entrance_2"><img src="http://file.ry600.com//snapshot/vms/site/di/di70684438lrfavs/du9sks0f7yefy23z/image//intro1-4.png"/></li>
+						<li class="nav-entrance nav-entrance_3"><img src="http://file.ry600.com//snapshot/vms/site/di/di70684438lrfavs/du9sks0f7yefy23z/image//intro1-5.png"/></li>
+						<li class="nav-entrance nav-entrance_4"><img src="http://file.ry600.com//snapshot/vms/site/di/di70684438lrfavs/du9sks0f7yefy23z/image//intro1-6.png"/></li>
+						<li class="nav-entrance nav-entrance_5"><img src="http://file.ry600.com//snapshot/vms/site/di/di70684438lrfavs/du9sks0f7yefy23z/image//intro1-7.png"/></li>
+						<li class="nav-entrance nav-entrance_6"><img src="http://file.ry600.com//snapshot/vms/site/di/di70684438lrfavs/du9sks0f7yefy23z/image//intro1-8.png"/></li>
+						<li class="nav-entrance nav-entrance_7"><img src="http://file.ry600.com//snapshot/vms/site/di/di70684438lrfavs/du9sks0f7yefy23z/image//intro1-9.png"/></li>
+					</ul>
+				</div>
+			</li>
+			<li class="item item_1 even">
+				<div>2</div>
+			</li>
+			<li class="item item_2 odd">
+				<div>3</div>
+			</li>
+			<li class="item item_3 even">
+				<div>4</div>
+			</li>
+			<li class="item item_4 odd">
+				<div>5</div>
+			</li>
+			<li class="item item_5 even">
+				<div>6</div>
+			</li>
+			<li class="item item_6 odd">
+				<div>7</div>
+			</li>
+			<li class="item item_7 even">
+				<div>8</div>
+			</li>
+			<li class="item item_8 odd">
+				<div>9</div>
+			</li>
+		</ul>
+		<ul id="pages"></ul>
+		<ul id="arrow">
+			<li>上翻</li>
+			<li>下翻</li>
+		</ul>
+	</div>
+	<script src="http://libs.baidu.com/jquery/1.10.2/jquery.js"></script>
+	<script type="text/javascript">
+		var i00 = $('.i_00');
+		//	初始化
+		$(document).ready(function(){
+			adapt();
+			$(window).resize(adapt);
+			var initMainPage = setTimeout(function(){
+				i00.animate({
+					width:'1702px',
+					height:'524px',
+					marginTop:'-20px'
+				},200,'linear',function(){
+					i00.animate({
+						width:'851px',
+						height:'262px',
+						marginTop:0
+					},600,function(){
+						$('.nav-entrance>img').animate({
+							width:'110px',
+							height:'166px',
+							marginLeft:0,
+							marginTop:0
+						},400);
+					});
+				}
+				);
+			},250);
+		});
+
+		//	滾動監聽
+		var scrollListen = function(e){
+		    e = e || window.event;
+		    if((e.wheelDelta && e.wheelDelta > 0) || (e.detail && e.detail < 0)){
+	            console.log("滑轮向上滚动");
+	            scrollFunc(-1);
+		    }else if((e.wheelDelta && e.wheelDelta < 0) || (e.detail && e.detail > 0)){
+	            console.log("滑轮向下滚动");
+	            scrollFunc(1);
+		    }
+		}
+		document.onmousewheel = scrollListen;
+		if (document.addEventListener){
+		    document.addEventListener('DOMMouseScroll', scrollListen, false);
+		}
+
+		//	初始化全局變量
+		var amount = $('.item').length,
+			crrPage = 0,
+			h = 0,
+			itemsTop = 0,
+			items = $('#items'),
+			item = $('.item');
+
+		//	自適應窗口大小
+		var adapt = function(){
+			h = $(window).height();
+			$('.item, #page-wrap').css({height:h});
+			items.css({'top':crrPage * -h})
+		}
+
+		//	各頁面的動畫序列
+		var callbackAnimation = function(p){
+			switch(p){
+				case 0: ;break;
+				case 1: ;break;
+				case 2: ;break;
+				case 3: ;break;
+				case 4: ;break;
+				case 5: ;break;
+				case 6: ;break;
+				case 7: ;break;
+				case 8: ;break;
+			}
+		}
+
+		//	翻頁方法
+		var scrollFunc = function(direction){
+			console.log("h=" + h + ", top=" + itemsTop);
+			// 允許翻頁條件：1.動畫停止，2.首頁只允許下翻，3.尾頁只允許上翻
+			if((items.is(":animated")) || ((crrPage == 0) && (direction == -1)) || ((crrPage == amount - 1) && (direction == 1))){
+				return false;
+			}else{
+				crrPage = crrPage + direction;
+				items.animate({'top': (crrPage * -h)},500,function(){
+					itemsTop = parseInt(items.css('top'));
+					callbackAnimation(crrPage);
+				});
+			}
+		}
+
+		//	首屏hover方法
+		$('.nav-entrance>img').hover(function(){
+			if(!$(this).is(":animated")){
+				$(this).animate({
+					width:'122px',
+					height:'184px',
+					marginLeft:'-6px',
+					marginTop:'-8px'
+				},100)
+			}
+		},function(){
+			$(this).stop().animate({
+				width:'110px',
+				height:'166px',
+				marginLeft:0,
+				marginTop:0
+			},100)
+		})
+	</script>
+</body>
+</html>
