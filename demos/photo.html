@@ -1,0 +1,1586 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<style type="text/css">
+	*{
+		margin: 0;
+		padding:0;
+	}
+	.page-footer{
+		margin:0;
+	}
+	li{
+		list-style-type: none;
+	}
+	#body-wrap{
+		width: 100%;
+		min-width: 980px;
+		overflow: hidden;
+		position: relative;
+	}
+	.header{
+		width: 100%;
+		height: 50px;
+		position: fixed;
+		top: 0;
+		z-index: 9;
+		background: url(http://file.ry600.com//snapshot/vms/site/di/di70684438lrfavs/du9sks0f7yefy23z/image//intro_headbg.jpg) repeat-x;
+	}
+	.header-cnt{
+		width: 980px;
+		height: 50px;
+		margin: 0 auto;
+	}
+	.ry-logo{
+		width: 131px;
+		height: 40px;
+		float: left;
+		background: url("http://bh.ry600.com/snapshot/vms/site/di/di70684438lrfavs/du9sks0f7yefy23z/image/ry_srch_crt.png") no-repeat 0 0;
+		border-right: 1px solid #CCC;
+		padding-right: 15px;
+		margin-top: 5px;
+		cursor: pointer;
+	}
+	.intro-logo{
+		width: 93px;
+		height: 40px;
+		float: left;
+		background: url(http://file.ry600.com//snapshot/vms/site/di/di70684438lrfavs/du9sks0f7yefy23z/image//intro_headtitle.png) no-repeat 15px 8px;
+		padding-left: 15px;
+		border-left: 1px solid #EEE;
+		margin-top: 5px;
+	}
+	.tel{
+		float: right;
+		height: 30;
+		margin-top: 25px;
+	}
+	.tel-pic{
+		width:30px;
+		height:27px;
+		background: url(http://file.ry600.com//snapshot/vms/site/di/di70684438lrfavs/du9sks0f7yefy23z/image//intro0-2.png);
+		position: absolute;
+		margin-top: -9px;
+	}
+	.tel-num{
+		font-size: 15px;
+		font-family: "Microsoft YaHei";
+		color: #F50;
+		margin-left: 35px;
+	}
+	#items{
+		position: absolute;
+		width: 100%;
+	}
+	.item{
+		width: 100%;
+		height: 800px;
+		position: relative;
+		background-repeat:no-repeat;
+		background-position:center center;
+		background-size: cover;     
+		background-image:url(http://file.ry600.com//snapshot/vms/site/di/di70684438lrfavs/du9sks0f7yefy23z/image//intro_bg.png);
+	}
+	.item_0{
+		background-image: url(http://file.ry600.com//snapshot/vms/site/di/di70684438lrfavs/du9sks0f7yefy23z/image//companyintroduction_01.jpg);
+		background-color:rgb(255,123,0);
+	}
+	.item_1{
+		background-color:#ed9558;
+	}
+	.item_2{
+		background-color:#49c1ce;
+	}
+	.item_3{
+		background-color:#ed8574;
+	}
+	.item_4{
+		background-color:#bf5baf;
+	}
+	.item_5{
+		background-color:#abc445;
+	}
+	.item_6{
+		background-color:#4dc47d;
+	}
+	.item_7{
+		background-color:#db8adb;
+	}
+	.item_8{
+		background-color:#72c1e8;
+	}
+	.item_9{
+		background-color:#e39371;
+	}
+	.i-cnt{
+		width: 980px;
+		height: 615px;
+		margin: -275px 0 0 -490px;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		background-repeat: no-repeat;
+		background-position: center center;
+	}
+	.i-cnt>ul{
+		position:relative;
+		padding-left: 20px;
+	}
+	.i-cnt>ul>li{
+		position: absolute;
+		z-index: 2;
+	}
+	.i-cnt_00{
+		width: 1720px;
+		height: 550px;
+		margin: -275px 0 0 -860px;
+		top: 50%;
+		left: 50%;
+		position: absolute;
+	}
+	.i_00{
+		left:50%;
+		display: block;
+		position: absolute;
+	}
+	.navs-entrance{
+		width: 1100px;
+		height: 166px;
+		margin: -10px auto;
+		position: relative;
+		padding-top:270px;
+	}
+	.navs-entrance>li{
+		position: absolute;
+	}
+	.navs-entrance>li>img{
+		width: 77px;
+		height: 116px;
+		margin-left: 16.5px;
+		margin-top: 25px;
+		cursor: pointer;
+	}
+	.nav-entrance_1{
+		margin: 30px 0 0 121px;
+	}
+	.nav-entrance_2{
+		margin: 60px 0 0 242px;
+	}
+	.nav-entrance_3{
+		margin: 90px 0 0 363px;
+	}
+	.nav-entrance_4{
+		margin: 120px 0 0 484px;
+	}
+	.nav-entrance_5{
+		margin: 90px 0 0 605px;
+	}
+	.nav-entrance_6{
+		margin: 60px 0 0 726px;
+	}
+	.nav-entrance_7{
+		margin: 30px 0 0 847px;
+	}
+	.nav-entrance_8{
+		margin: 0 0 0 968px;
+	}
+	.title-wrap{
+		width: 980px;
+		height: 100%;
+		position: relative;
+		margin: 0 auto;
+		z-index: 1;
+	}
+	.page-title{
+		width: 480px;
+		height: 74px;
+		background-position: center right;
+		background-repeat: no-repeat;
+		position: absolute;
+		top: 10%;
+		right: 0;
+	}
+	.bg-title{
+		width: 1029px;
+		height: 97px;
+		background-position: center center;
+		background-repeat: no-repeat;
+		position: absolute;
+		bottom: 0;
+	}
+	.pt_01{
+		background-image: url(http://file.ry600.com//snapshot/vms/site/di/di70684438lrfavs/du9sks0f7yefy23z/image//companyintroduction_02.png);
+	}
+	.bt_01{
+		background-image: url(http://file.ry600.com//snapshot/vms/site/di/di70684438lrfavs/du9sks0f7yefy23z/image//companyintroduction_02-1.png);
+	}
+	.pt_02{
+		background-image: url(http://file.ry600.com//snapshot/vms/site/di/di70684438lrfavs/du9sks0f7yefy23z/image//companyintroduction_03.png);
+	}
+	.bt_02{
+		background-image: url(http://file.ry600.com//snapshot/vms/site/di/di70684438lrfavs/du9sks0f7yefy23z/image//companyintroduction_03-1.png);
+	}
+	.pt_03{
+		background-image:url(http://file.ry600.com//snapshot/vms/site/di/di70684438lrfavs/du9sks0f7yefy23z/image//companyintroduction_04.png);
+	}
+	.bt_03{
+		background-image:url(http://file.ry600.com//snapshot/vms/site/di/di70684438lrfavs/du9sks0f7yefy23z/image//companyintroduction_04-1.png);
+	}
+	.pt_04{
+		background-image:url(http://file.ry600.com//snapshot/vms/site/di/di70684438lrfavs/du9sks0f7yefy23z/image//companyintroduction_05.png);
+	}
+	.bt_04{
+		background-image:url(http://file.ry600.com//snapshot/vms/site/di/di70684438lrfavs/du9sks0f7yefy23z/image//companyintroduction_05-1.png);
+	}
+	.pt_05{
+		background-image:url(http://file.ry600.com//snapshot/vms/site/di/di70684438lrfavs/du9sks0f7yefy23z/image//companyintroduction_06.png);
+	}
+	.bt_05{
+		background-image:url(http://file.ry600.com//snapshot/vms/site/di/di70684438lrfavs/du9sks0f7yefy23z/image//companyintroduction_06-1.png);
+	}
+	.pt_06{
+		background-image:url(http://file.ry600.com//snapshot/vms/site/di/di70684438lrfavs/du9sks0f7yefy23z/image//companyintroduction_07.png);
+	}
+	.bt_06{
+		background-image:url(http://file.ry600.com//snapshot/vms/site/di/di70684438lrfavs/du9sks0f7yefy23z/image//companyintroduction_07-1.png);
+	}
+	.pt_07{
+		background-image:url(http://file.ry600.com//snapshot/vms/site/di/di70684438lrfavs/du9sks0f7yefy23z/image//companyintroduction_08.png);
+	}
+	.bt_07{
+		background-image:url(http://file.ry600.com//snapshot/vms/site/di/di70684438lrfavs/du9sks0f7yefy23z/image//companyintroduction_08-1.png);
+	}
+	.pt_08{
+		background-image:url(http://file.ry600.com//snapshot/vms/site/di/di70684438lrfavs/du9sks0f7yefy23z/image//companyintroduction_09.png);
+	}
+	.bt_08{
+		background-image:url(http://file.ry600.com//snapshot/vms/site/di/di70684438lrfavs/du9sks0f7yefy23z/image//companyintroduction_09-1.png);
+	}
+	.pt_09{
+		background-image:url(http://file.ry600.com//snapshot/vms/site/di/di70684438lrfavs/du9sks0f7yefy23z/image//companyintroduction_10.png);
+	}
+	.bt_09{
+		background-image:url(http://file.ry600.com//snapshot/vms/site/di/di70684438lrfavs/du9sks0f7yefy23z/image//companyintroduction_10-1.png);
+	}
+	.i-cnt_01{
+		width: 919px;
+		height: 632px;
+		position: absolute;
+		margin-left: -460px;
+		left: 50%;
+		margin-top: -250px;
+		top: 50%;
+		background-image: url(http://file.ry600.com//snapshot/vms/site/di/di70684438lrfavs/du9sks0f7yefy23z/image//companyintroduction_02-2.png);
+		background-repeat: no-repeat;
+		background-position: center center;
+	}
+	.i_01_0{
+		margin:30px 0 0 -150px;
+	}
+	.i_01_1{
+		margin:50px 0 0 650px;
+	}
+	.i_01_2{
+		margin:260px 0 0 -150px;
+	}
+	.i_01_3{
+		margin:300px 0 0 650px;
+	}
+	.i-cnt_02{
+		background-image: url(http://file.ry600.com//snapshot/vms/site/di/di70684438lrfavs/du9sks0f7yefy23z/image//companyintroduction_03-2.png);
+		position: absolute;
+	}
+	.i-cnt_02>ul>li>img{
+		width: 0;
+		height: 0;
+	}
+	.i_02_0{
+		margin: -40px 0 0 275px;
+	}
+	.i_02_1{
+		margin: 165px 0 0 -70px;
+	}
+	.i_02_2{
+		margin: 320px 0 0 600px;
+	}
+	.i_02_3{
+		margin: 420px 0 0 170px;
+	}
+	.i-cnt_03{
+		padding-top:60px;
+	}
+	.i_03_0{
+		margin:0;
+	}
+	.i_03_1{
+		margin:0 0 0 260px;
+	}
+	.i_03_2{
+		margin:0 0 0 520px;
+	}
+	.i_03_3{
+		margin:0 0 0 780px;
+	}
+	.i_03_4{
+		margin:280px 0 0 130px;
+	}
+	.i_03_5{
+		margin:280px 0 0 390px;
+	}
+	.i_03_6{
+		margin:280px 0 0 650px;
+	}
+	.i_04_0{
+		margin:0 20px;
+		overflow: hidden;
+	}
+	.i_04_1{
+		margin:450px 0;
+		overflow: hidden;
+		position: relative;
+		width: 967px;
+	}
+	.img_04{
+		position: absolute;
+		bottom: 0;
+	}
+	.i-cnt_04>ul{
+		margin-top: -15px;
+	}
+	.i-cnt_05{
+		padding-top: 85px;
+	}
+	.i_05_1{
+		margin:0 550px;
+	}
+	.i_06_1{
+		margin-top:80px;
+	}
+	.i-cnt_07{
+		padding-top: 65px;
+	}
+	.i_07_1{
+		margin-left: 530px;
+	}
+	.i-cnt_08>ul{
+		margin:65px 0 0 -100px;
+	}
+	.i_08_1{
+		margin:20px 0 0 620px;
+	}
+	#page-wrap{
+		position:fixed;
+		width:980px;
+		margin-left: -490px;
+		left: 50%;
+		bottom: 0;
+		display: none;
+		z-index: 15;
+	}
+	#page-wrap>div{
+		position: relative;
+		width: 100%;
+		height: 100%
+	}
+	#pages{
+		width: 130px;
+		height: 310px;
+		position: absolute;
+		right: 0;
+		bottom: 100px;
+		margin-right: -180px;
+		padding-top: 4px;
+		background-image: url(http://file.ry600.com//snapshot/vms/site/di/di70684438lrfavs/du9sks0f7yefy23z/image//intro0-3.png);
+		background-repeat: no-repeat;
+	}
+	.i-cnt_10{
+		width: 1100px;
+		margin-left: -550px;
+	}
+	.i-page{
+		display: block;
+		width:116px;
+		margin:0 auto;
+		height:26px;
+		margin:4px auto;
+		text-align: center;
+		font-size: 17px;
+		line-height: 26px;
+		color: #969696;
+		font-family: "Microsoft YaHei";
+		cursor: pointer;
+		z-index: 15;
+	}
+	.i-page:hover{
+		background-color: #FF7800;
+		color:#FFF;
+	}
+	.crr-page{
+		background-color: #FF7800;
+		color:#FFF !important;
+	}
+	#arrow{
+		position: absolute;
+		width: 60px;
+		height: 22px;
+		margin-left: -30px;
+		left: 50%;
+		bottom: 10px;
+		z-index: 20;
+		cursor: pointer;
+	}
+	#arrow>li{
+		width: 60px;
+		height: 22px;
+		background-repeat: no-repeat;
+		background-image:url(http://file.ry600.com//snapshot/vms/site/di/di70684438lrfavs/du9sks0f7yefy23z/image//intro_next.png);
+	}
+	.arrow-next{
+		display: block;
+		background-position:0 -27px;
+	}
+	.arrow-top{
+		display: none;
+		background-position:0 -81px;
+	}
+	.arrow-next:hover{
+		background-position:0 0;
+	}
+	.arrow-top:hover{
+		background-position:0 -54px;
+	}
+
+	.i_09>li{
+		position: absolute;
+		width:239px;
+		height:259px;
+		background-image: url(http://file.ry600.com//snapshot/vms/site/di/di70684438lrfavs/du9sks0f7yefy23z/image//photo-bg-s.png);
+		background-repeat: no-repeat;
+		cursor: pointer;
+	}
+	.i_09>li:hover{
+		z-index: 6 !important;
+	}
+	.i-cnt_09{
+		width:1150px;
+		height: 600px;
+		margin: -260px 0 0 -575px;
+	}
+	.i_09_2, .i_09_5, .i_09_7{
+		transform:rotate(355deg);
+		-ms-transform:rotate(355deg); /* Internet Explorer */
+		-moz-transform:rotate(355deg); /* Firefox */
+		-webkit-transform:rotate(355deg); /* Safari 和 Chrome */
+		-o-transform:rotate(355deg); /* Opera */
+		z-index: 5 !important;
+	}
+	.i_09_1, .i_09_3{
+		transform:rotate(3deg);
+		-ms-transform:rotate(3deg); /* Internet Explorer */
+		-moz-transform:rotate(3deg); /* Firefox */
+		-webkit-transform:rotate(3deg); /* Safari 和 Chrome */
+		-o-transform:rotate(3deg); /* Opera */
+		z-index: 4 !important;
+	}
+	.i_09_0{
+		margin:35px 0 0 0;
+		transform:rotate(350deg);
+		-ms-transform:rotate(350deg); /* Internet Explorer */
+		-moz-transform:rotate(350deg); /* Firefox */
+		-webkit-transform:rotate(350deg); /* Safari 和 Chrome */
+		-o-transform:rotate(350deg); /* Opera */
+		z-index: 5 !important;
+	}
+	.i_09_1{
+		margin:0 0 0 220px;
+	}
+	.i_09_2{
+		margin:30px 0 0 433px;
+	}
+	.i_09_3{
+		margin:20px 0 0 650px;
+	}
+	.i_09_4{
+		margin:20px 0 0 866px;
+		transform:rotate(13deg);
+		-ms-transform:rotate(13deg); /* Internet Explorer */
+		-moz-transform:rotate(13deg); /* Firefox */
+		-webkit-transform:rotate(13deg); /* Safari 和 Chrome */
+		-o-transform:rotate(13deg); /* Opera */
+	}
+	.i_09_5{
+		margin:330px 0 0 120px;
+	}
+	.i_09_6{
+		margin:315px 0 0 355px;
+	}
+	.i_09_7{
+		margin:330px 0 0 565px;
+	}
+	.i_09_8{
+		margin:315px 0 0 775px;
+		transform:rotate(5deg);
+		-ms-transform:rotate(5deg); /* Internet Explorer */
+		-moz-transform:rotate(5deg); /* Firefox */
+		-webkit-transform:rotate(5deg); /* Safari 和 Chrome */
+		-o-transform:rotate(5deg); /* Opera */
+	}
+
+	/*.i_09_1:before{
+		content: url("http://file.ry600.com//snapshot/vms/site/di/di70684438lrfavs/du9sks0f7yefy23z/image//thumbtack-l-black.png");
+		margin: -30px 100px;
+		position: absolute;
+	}*/
+
+	.thumbtack-s{
+		width:21px;
+		height: 38px;
+		margin-left: 108px;
+		position: relative;
+	}
+	.photo-s{
+		width: 198px;
+		height: 162px;
+		overflow: hidden;
+		margin:-21px 0 0 20px;
+	}
+	.photo-s>img{
+		width: 198px;
+		height: 162px;
+	}
+	.title-s{
+		margin: 8px 20px 0 0;
+		font-size: 18px;
+	}
+	.photo-amount{
+		margin-right: 20px;
+		font-size: 14px;
+	}
+	.title-s, .photo-amount{
+		float: right;
+		clear: both;
+		font-family: "Microsoft YaHei";
+		color: #000;
+		opacity: 0.35;
+		font-weight: bold;
+	}
+	.i_09-modal{
+		position: fixed;
+		width: 100%;
+		height: 100%; 
+		top: 0;
+		left: 0;
+		z-index: 30;
+		display: none;
+	}
+	.i_09-modal-bg{
+		width: 100%;
+		height: 100%;
+		background-color: #000;
+		opacity: 0.5;
+	    filter:alpha(opacity=50);   
+	    -moz-opacity:0.5;   
+	    -khtml-opacity: 0.5;
+	    position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 26;
+	}
+	.photo-wrap{
+		width: 639px;
+		height: 694px;
+		background-image: url(http://file.ry600.com//snapshot/vms/site/di/di70684438lrfavs/du9sks0f7yefy23z/image//photo-bg-l.png);
+		background-repeat: no-repeat;
+		z-index:27;
+		position: fixed;
+		margin:-347px 0 0 -320px;
+		top: 50%;
+		left: 50%;
+	}
+	.thumbtack-l>img{
+		margin:-15px 310px;
+		position: absolute;
+		z-index: 20;
+	}
+	.close{
+		width: 34px;
+		height: 34px;
+		position: absolute;
+		right: 0;
+		margin: 28px 18px 0 0;
+		background-image: url(http://file.ry600.com//snapshot/vms/site/di/di70684438lrfavs/du9sks0f7yefy23z/image//close.png);
+		cursor: pointer;
+		z-index: 25;
+	}
+	.photos{
+		width: 567px;
+		height: 456px;
+		margin: 49px 0 0 36px;
+		overflow: hidden;
+	}
+	.photo-pages{
+		margin: 15px auto 0;
+		height: 8px;
+	}
+	.photo-page{
+		width: 40px;
+		height: 8px;
+		float: left;
+		margin:0 2px 0 3px;
+		background-image: url(http://file.ry600.com//snapshot/vms/site/di/di70684438lrfavs/du9sks0f7yefy23z/image//ppt-page.png);
+		background-repeat: no-repeat;
+		background-position: 0 0;
+		cursor: pointer;
+	}
+	.photo-page-sec{
+		background-position: 0 -10px;
+	}
+	.photos-title{
+		margin-left: -6px;
+		text-align: center;
+		font-size: 20px;
+		font-family: "Microsoft YaHei";
+		color: #000;
+		opacity: 0.7;
+	}
+	.txt-cnt{
+		padding: 0 30px;
+		width: 567px;
+		height: 110px;
+		overflow: hidden;
+	}
+	.txt-cnt>li{
+		position: absolute;
+	}
+	.photo-title{
+		font-size: 28px;
+		line-height: 30px;
+		margin-bottom: 10px;
+	}
+	.photo-dec{
+		font-size: 18px;
+		text-indent: 35px;
+		line-height: 25px;
+		width: 567px;
+	}
+	.photo-title, .photo-dec{
+		font-family: "Microsoft YaHei";
+		color: #000;
+		opacity: 0.7;
+	}
+	.photo, .photos>li{
+		width: 567px;
+		height: 456px;
+	}
+	.photos>li{
+		position: absolute;
+		z-index: 5;
+		overflow: hidden;
+	}
+	</style>
+</head>
+<body>
+	<div id="body-wrap">
+		<div class="header">
+			<div class="header-cnt">
+				<a href="/_shop/storemap.shtml"><div class="ry-logo"></div></a>
+				<div class="intro-logo"></div>
+				<div class="tel"><div class="tel-pic"></div><span class="tel-num">服务热线：400-611-4016</span></div>
+			</div>
+		</div>
+		<ul id="items">
+			<li class="item item_0">
+				<div class="i-cnt i-cnt_00">
+					<img class="i_00" src="http://file.ry600.com//snapshot/vms/site/di/di70684438lrfavs/du9sks0f7yefy23z/image//intro1-1.png"/>
+					<ul class="navs-entrance">
+						<li class="nav-entrance_0"><img src="http://file.ry600.com//snapshot/vms/site/di/di70684438lrfavs/du9sks0f7yefy23z/image//intro1-2.png"/></li>
+						<li class="nav-entrance_1"><img src="http://file.ry600.com//snapshot/vms/site/di/di70684438lrfavs/du9sks0f7yefy23z/image//intro1-3.png"/></li>
+						<li class="nav-entrance_2"><img src="http://file.ry600.com//snapshot/vms/site/di/di70684438lrfavs/du9sks0f7yefy23z/image//intro1-4.png"/></li>
+						<li class="nav-entrance_3"><img src="http://file.ry600.com//snapshot/vms/site/di/di70684438lrfavs/du9sks0f7yefy23z/image//intro1-5.png"/></li>
+						<li class="nav-entrance_4"><img src="http://file.ry600.com//snapshot/vms/site/di/di70684438lrfavs/du9sks0f7yefy23z/image//intro1-6.png"/></li>
+						<li class="nav-entrance_5"><img src="http://file.ry600.com//snapshot/vms/site/di/di70684438lrfavs/du9sks0f7yefy23z/image//intro1-7.png"/></li>
+						<li class="nav-entrance_6"><img src="http://file.ry600.com//snapshot/vms/site/di/di70684438lrfavs/du9sks0f7yefy23z/image//intro1-8.png"/></li>
+						<li class="nav-entrance_7"><img src="http://file.ry600.com//snapshot/vms/site/di/di70684438lrfavs/du9sks0f7yefy23z/image//intro1-9.png"/></li>
+						<li class="nav-entrance_8"><img src="http://file.ry600.com//snapshot/vms/site/di/di70684438lrfavs/du9sks0f7yefy23z/image//intro1-10.png"/></li>
+					</ul>
+				</div>
+			</li>
+			<li class="item item_1">
+				<div class="title-wrap">
+					<div class="page-title pt_01"></div>
+					<div class="bg-title bt_01"></div>
+				</div>
+				<div class="i-cnt i-cnt_01">
+					<ul>
+						<li class="i_01_0"><img src="http://file.ry600.com//snapshot/vms/site/di/di70684438lrfavs/du9sks0f7yefy23z/image//intro2-1.png"></li>
+						<li class="i_01_1"><img src="http://file.ry600.com//snapshot/vms/site/di/di70684438lrfavs/du9sks0f7yefy23z/image//intro2-2.png"></li>
+						<li class="i_01_2"><img src="http://file.ry600.com//snapshot/vms/site/di/di70684438lrfavs/du9sks0f7yefy23z/image//intro2-3.png"></li>
+						<li class="i_01_3"><img src="http://file.ry600.com//snapshot/vms/site/di/di70684438lrfavs/du9sks0f7yefy23z/image//intro2-4.png"></li>
+					</ul>
+				</div>
+			</li>
+			<li class="item item_2">
+				<div class="title-wrap">
+					<div class="page-title pt_02"></div>
+					<div class="bg-title bt_02"></div>
+				</div>
+				<div class="i-cnt i-cnt_02">
+					<ul>
+						<li class="i_02_0"><img src="http://file.ry600.com//snapshot/vms/site/di/di70684438lrfavs/du9sks0f7yefy23z/image//intro3-4.png"></li>
+						<li class="i_02_1"><img src="http://file.ry600.com//snapshot/vms/site/di/di70684438lrfavs/du9sks0f7yefy23z/image//intro3-3.png"></li>
+						<li class="i_02_2"><img src="http://file.ry600.com//snapshot/vms/site/di/di70684438lrfavs/du9sks0f7yefy23z/image//intro3-2.png"></li>
+						<li class="i_02_3"><img src="http://file.ry600.com//snapshot/vms/site/di/di70684438lrfavs/du9sks0f7yefy23z/image//intro3-1.png"></li>
+					</ul>
+				</div>
+			</li>
+			<li class="item item_3">
+				<div class="title-wrap">
+					<div class="page-title pt_03"></div>
+					<div class="bg-title bt_03"></div>
+				</div>
+				<div class="i-cnt i-cnt_03">
+					<ul>
+						<li class="i_03_0"><img src="http://file.ry600.com//snapshot/vms/site/di/di70684438lrfavs/du9sks0f7yefy23z/image//intro4-1.png"/></li>
+						<li class="i_03_1"><img src="http://file.ry600.com//snapshot/vms/site/di/di70684438lrfavs/du9sks0f7yefy23z/image//intro4-2.png"/></li>
+						<li class="i_03_2"><img src="http://file.ry600.com//snapshot/vms/site/di/di70684438lrfavs/du9sks0f7yefy23z/image//intro4-3.png"/></li>
+						<li class="i_03_3"><img src="http://file.ry600.com//snapshot/vms/site/di/di70684438lrfavs/du9sks0f7yefy23z/image//intro4-4.png"/></li>
+						<li class="i_03_4"><img src="http://file.ry600.com//snapshot/vms/site/di/di70684438lrfavs/du9sks0f7yefy23z/image//intro4-5.png"/></li>
+						<li class="i_03_5"><img src="http://file.ry600.com//snapshot/vms/site/di/di70684438lrfavs/du9sks0f7yefy23z/image//intro4-6.png"/></li>
+						<li class="i_03_6"><img src="http://file.ry600.com//snapshot/vms/site/di/di70684438lrfavs/du9sks0f7yefy23z/image//intro4-7.png"/></li>
+					</ul>
+				</div>
+			</li>
+			<li class="item item_4">
+				<div class="title-wrap">
+					<div class="page-title pt_04"></div>
+					<div class="bg-title bt_04"></div>
+				</div>
+				<div class="i-cnt i-cnt_04">
+					<ul>
+						<li class="i_04_0"><img src="http://file.ry600.com//snapshot/vms/site/di/di70684438lrfavs/du9sks0f7yefy23z/image//intro5-1.png"/></li>
+						<li><div class="i_04_1"><img class="img_04" src="http://file.ry600.com//snapshot/vms/site/di/di70684438lrfavs/du9sks0f7yefy23z/image//intro5-2.png"/></div></li>
+					</ul>
+				</div>
+			</li>
+			<li class="item item_5">
+				<div class="title-wrap">
+					<div class="page-title pt_05"></div>
+					<div class="bg-title bt_05"></div>
+				</div>
+				<div class="i-cnt i-cnt_05">
+					<ul>
+						<li class="i_05_0"><img src="http://file.ry600.com//snapshot/vms/site/di/di70684438lrfavs/du9sks0f7yefy23z/image//intro6-1.png"/></li>
+						<li class="i_05_1"><img src="http://file.ry600.com//snapshot/vms/site/di/di70684438lrfavs/du9sks0f7yefy23z/image//intro6-2.png"/></li>
+					</ul>
+				</div>
+			</li>
+			<li class="item item_6">
+				<div class="title-wrap">
+					<div class="page-title pt_06"></div>
+					<div class="bg-title bt_06"></div>
+				</div>
+				<div class="i-cnt i-cnt_06">
+					<ul>
+						<li class="i_06_0"><img src="http://file.ry600.com//snapshot/vms/site/di/di70684438lrfavs/du9sks0f7yefy23z/image//intro7-1.png"/></li>
+						<li class="i_06_1"><img class="img_06" src="http://file.ry600.com//snapshot/vms/site/di/di70684438lrfavs/du9sks0f7yefy23z/image//intro7-2.png"/></li>
+					</ul>
+				</div>
+			</li>
+			<li class="item item_7">
+				<div class="title-wrap">
+					<div class="page-title pt_07"></div>
+					<div class="bg-title bt_07"></div>
+				</div>
+				<div class="i-cnt i-cnt_07">
+					<ul>
+						<li class="i_07_0"><img src="http://file.ry600.com//snapshot/vms/site/di/di70684438lrfavs/du9sks0f7yefy23z/image//intro8-1.png"/></li>
+						<li class="i_07_1"><img src="http://file.ry600.com//snapshot/vms/site/di/di70684438lrfavs/du9sks0f7yefy23z/image//intro8-2.png"/></li>
+					</ul>
+				</div>
+			</li>
+			<li class="item item_8">
+				<div class="title-wrap">
+					<div class="page-title pt_08"></div>
+					<div class="bg-title bt_08"></div>
+				</div>
+				<div class="i-cnt i-cnt_08">
+					<ul>
+						<li class="i_08_0"><img src="http://file.ry600.com//snapshot/vms/site/di/di70684438lrfavs/du9sks0f7yefy23z/image//intro9-1.png"/></li>
+						<li class="i_08_1"><img src="http://file.ry600.com//snapshot/vms/site/di/di70684438lrfavs/du9sks0f7yefy23z/image//intro9-2.png"/></li>
+					</ul>
+				</div>
+			</li>
+			<li class="item item_9">
+				<div class="title-wrap">
+					<div class="page-title pt_09"></div>
+					<div class="bg-title bt_09"></div>
+				</div>
+				<div class="i-cnt i-cnt_09">
+					<ul class="i_09">
+						<li class="i_09_0"></li>
+						<li class="i_09_1"></li>
+						<li class="i_09_2"></li>
+						<li class="i_09_3"></li>
+						<li class="i_09_4"></li>
+						<li class="i_09_5"></li>
+						<li class="i_09_6"></li>
+						<li class="i_09_7"></li>
+						<li class="i_09_8"></li>
+					</ul>
+				</div>
+				<div class="i_09-modal">
+					<div class="i_09-modal-bg"></div>
+					<div class="photo-wrap">
+						<div class="thumbtack-l">
+							<!-- delecte -->
+							<img src="http://file.ry600.com//snapshot/vms/site/di/di70684438lrfavs/du9sks0f7yefy23z/image//thumbtack-l-blue.png"/>
+						</div>
+						<div class="close"></div>
+						<ol class="photos"></ol>
+						<ol class="photo-pages"></ol>
+						<div class="photos-title"></div>
+						<ol class="txt-cnt"></ol>
+					</div>
+				</div>
+			</li>
+		</ul>
+		<div id="page-wrap">
+			<div>
+				<ul id="pages">
+					<li class="i-page">成立背景</li>
+					<li class="i-page">公司简介</li>
+					<li class="i-page">企业文化</li>
+					<li class="i-page">公司架构</li>
+					<li class="i-page">公司产品</li>
+					<li class="i-page">公司业绩</li>
+					<li class="i-page">公司荣誉</li>
+					<li class="i-page">未来规划</li>
+					<li class="i-page">荣药照片墙</li>
+					<li class="i-page">TOP</li>
+				</ul>
+			</div>
+		</div>
+		<ul id="arrow">
+			<li class="arrow-next"></li>
+			<li class="arrow-top"></li>
+		</ul>
+	</div>
+	<script src="http://libs.baidu.com/jquery/1.10.2/jquery.js"></script>
+	<script type="text/javascript">
+		//	初始化全局變量
+		var amount = $('.item').length,
+			prePage = 0,
+			crrPage = 0,
+			h = 0,
+			itemsTop = 0,
+			items = $('#items'),
+			item = $('.item'),
+			timeout001,timeout011,timeout012,timeout013,timeout020,timeout021,timeout022,timeout041;
+		var isModal = false;
+		//	初始化頁面
+		$(document).ready(function(){
+			adapt();	//	初始化頁面大小
+			for(var i = 0; i < item.length; i++){	//	初始化頁面
+				resetPrePage(i);
+			}
+			setTimeout(function(){	//	首屏動畫
+					callbackAnimation(0);
+			},250);
+			$(window).resize(adapt);	//	監聽窗口大小的變化
+		});
+
+		//	導航點擊事件
+		$('.i-page, .navs-entrance>li').click(function(){
+			prePage = crrPage;
+			var idx = $(this).index() + 1;
+			crrPage = (idx == amount) ? 0 : idx;
+			scrollAnimation(crrPage,prePage);
+		});
+
+		//	箭頭點擊事件
+		$('#arrow').click(function(){
+			if(!items.is(':animated')){
+				prePage = crrPage;
+				crrPage = (crrPage == (amount -  1) ? 0 : (crrPage + 1));
+				scrollAnimation(crrPage,prePage);
+			}
+		});
+
+		//	鍵盤監聽
+		$('html, body').keydown(function(event){
+			if(!(items.is(":animated")) && !isModal){
+				if((event.keyCode == 38) && (crrPage != 0)){
+					prePage = crrPage;
+					crrPage = crrPage - 1;
+					scrollAnimation(crrPage,prePage);
+				}else if(event.keyCode == 40){
+					prePage = crrPage;
+					crrPage = (crrPage == (amount - 1) ? 0 : (crrPage + 1));
+					scrollAnimation(crrPage,prePage);
+				}
+			}
+		});
+
+		//	鼠標滑輪滾動監聽
+		var scrollListen = function(e){
+		    e = e || window.event;
+		    if(!isModal){
+			    if((e.wheelDelta && e.wheelDelta > 0) || (e.detail && e.detail < 0)){	//	鼠標滑輪上翻
+			        scrollFunc(-1);
+			    }else if((e.wheelDelta && e.wheelDelta < 0) || (e.detail && e.detail > 0)){	//	鼠標滑輪下翻
+			        scrollFunc(1);
+			    }	
+		    }
+		}
+		document.onmousewheel = scrollListen;
+		if (document.addEventListener){
+		    document.addEventListener('DOMMouseScroll', scrollListen, false);
+		}
+
+		//	鼠標滑輪翻頁方法
+		var scrollFunc = function(direction){
+			//	翻頁條件
+			if(!(items.is(":animated"))){
+				if((crrPage == 0) && (direction == -1)){
+					return false;
+				}else{
+					prePage = crrPage;
+					if((crrPage == amount - 1) && (direction == 1)){
+						crrPage = 0;
+					}else{
+						crrPage = crrPage + direction;
+					}
+					scrollAnimation(crrPage,prePage);
+				}
+			} 
+		}
+
+		//	首屏hover方法
+		$('.navs-entrance>li>img').hover(function(){
+			if(!$(this).is(":animated")){
+				$(this).animate({
+					width:'122px',
+					height:'184px',
+					marginLeft:'-6px',
+					marginTop:'-8px'
+				},100)
+			}
+		},function(){
+			$(this).stop().animate({
+				width:'110px',
+				height:'166px',
+				marginLeft:0,
+				marginTop:0,
+				opacity:1
+			},100)
+		});
+
+		//	自適應窗口大小
+		var adapt = function(){
+			h = $(window).height();
+			$('.item, #body-wrap').css({height:h});
+			items.css({top:(crrPage * -h)});
+		}
+
+		//	上一頁面恢復
+		var resetPrePage = function(pre){
+			switch(pre){
+				case 0: 
+						clearTimeout(timeout001);
+						$('.i_00').stop().css({
+							width:'1400px',
+							height:'555px',
+							marginLeft:'-700px'
+						});
+						$('.navs-entrance>li>img').stop().css({
+							width:'77px',
+							height:'116px',
+							marginLeft:'16.5px',
+							marginTop:'25px',
+							opacity:0
+						});
+						break;
+				case 1: 
+						clearTimeout(timeout011);
+						clearTimeout(timeout012);
+						clearTimeout(timeout013);
+						$('.i_01_0').stop().css({
+							marginLeft:'-120px',
+							opacity:0
+						});
+						$('.i_01_2').stop().css({
+							marginLeft:'-60px',
+							opacity:0
+						});
+						$('.i_01_1, .i_01_3').stop().css({
+							marginLeft:'600px',
+							opacity:0
+						});
+						break;
+				case 2: 
+						clearTimeout(timeout020);
+						clearTimeout(timeout021);
+						clearTimeout(timeout022);
+						$('.i_02_3>img').stop().css({
+							width:0,
+							height:0,
+							marginLeft:0,
+							marginTop:'150px',
+							opacity:0
+						});
+							$('.i_02_1>img').stop().css({
+								width:0,
+								height:0,
+								marginLeft:'215px',
+								marginTop:'200px',
+								opacity:1
+							});
+							$('.i_02_2>img').stop().css({
+								width:0,
+								height:0,
+								marginLeft:'10px',
+								marginTop:'20px',
+								opacity:1
+							});
+							$('.i_02_0>img').stop().css({
+								width:0,
+								height:0,
+								marginLeft:'460px',
+								marginTop:'210px',
+								opacity:1
+							});
+						break;
+				case 3: 
+						$('.i-cnt_03>ul>li>img').stop().css({
+							width:'165px',
+							height:'185px',
+							marginLeft:'35px',
+							marginTop:'40px',
+							opacity:0
+						});
+						break;
+				case 4: 
+						clearTimeout(timeout041);
+						$('.i_04_0').stop().css({
+							height:0,
+							opacity:1
+						});
+						$('.i_04_1').stop().css({
+							height:0,
+							marginTop:'640px',
+							opacity:0
+						});
+						break;
+				case 5: 
+						$('.i_05_0').stop().css({
+							marginLeft:'-80px',
+							opacity:0
+						});
+						$('.i_05_1').stop().css({
+							marginLeft:'630px',
+							opacity:0
+						});
+						break;
+				case 6: 
+						$('.i_06_0>img').stop().css({
+							width:'367px',
+							height:'475px',
+							marginLeft:'78px',
+							marginTop:'102px',
+							opacity:0
+						});
+						$('.i_06_1').stop().css({
+							marginLeft:'680px',
+							opacity:0
+						});
+						break;
+				case 7: 
+						$('.i_07_0').stop().css({
+							marginTop:'-80px',
+							opacity:0
+						});
+						$('.i_07_1').stop().css({
+							marginTop:'80px',
+							opacity:0
+						});
+						break;
+				case 8: 
+						$('.i_08_0>img').stop().css({
+							width:'551px',
+							height:'378px',
+							marginTop:'80px',
+							marginLeft:'90px',
+							opacity:0
+						});
+						$('.i_08_1>img').stop().css({
+							width:'311px',
+							height:'297px',
+							marginTop:'66px',
+							marginLeft:'63px',
+							opacity:0
+						});
+						break;
+			}
+		}
+
+		//	各頁面的動畫序列
+		var callbackAnimation = function(crr){
+			switch(crr){
+				case 0: 
+						$('.i_00').animate({
+							width:'600px',
+							height:'238px',
+							marginLeft:'-300px'
+						},600);
+						timeout001 = setTimeout(function(){
+							$('.navs-entrance>li>img').animate({
+								opacity:1,
+								width:'110px',
+								height:'166px',
+								marginLeft:0,
+								marginTop:0
+							},500,'linear');
+						},300);
+						break;
+				case 1: 
+						$('.i_01_0').animate({
+							marginLeft:'-50px',
+							opacity:1
+						},750);
+						timeout011 = setTimeout(function(){
+							$('.i_01_1').animate({
+								marginLeft:'530px',
+								opacity:1
+							},750);
+						},500);
+						timeout012 = setTimeout(function(){
+							$('.i_01_2').animate({
+								marginLeft:'40px',
+								opacity:1
+							},750);
+						},1000);
+						timeout013 = setTimeout(function(){
+							$('.i_01_3').animate({
+								marginLeft:'530px',
+								opacity:1
+							},750);
+						},1500);
+						break;
+				case 2: 
+						$('.i_02_3>img').animate({
+							width:'466px',
+							height:'261px',
+							marginLeft:0,
+							marginTop:0,
+							opacity:1
+						},850);
+						timeout021 = setTimeout(function(){
+							$('.i_02_1>img').animate({
+								width:'430px',
+								height:'220px',
+								marginLeft:0,
+								marginTop:0,
+								opacity:1
+							},850);
+						},500);
+						timeout022 = setTimeout(function(){
+							$('.i_02_2>img').animate({
+								width:'410px',
+								height:'222px',
+								marginLeft:0,
+								marginTop:0,
+								opacity:1
+							},850);
+						},1000);
+						timeout020 = setTimeout(function(){
+							$('.i_02_0>img').animate({
+								width:'470px',
+								height:'224px',
+								marginLeft:0,
+								marginTop:0,
+								opacity:1
+							},850);
+						},1500);
+						break;
+				case 3: 
+						$('.i-cnt_03>ul>li>img').animate({
+							width:'236px',
+							height:'265px',
+							marginLeft:0,
+							marginTop:0,
+							opacity:1
+						},700);
+						break;
+				case 4: 
+						$('.i_04_0').animate({
+							height:'430px'
+						},2800);
+						timeout041 = setTimeout(function(){
+							$('.i_04_1').animate({
+								height:'204px',
+								marginTop:'436px',
+								opacity:1
+							},800);
+						},2600);
+						break;
+				case 5: 
+						$('.i_05_0').animate({
+							marginLeft:0,
+							opacity:1
+						},700);
+						$('.i_05_1').animate({
+							marginLeft:'550px',
+							opacity:1
+						},700);
+						break;
+				case 6: 
+						$('.i_06_0>img').animate({
+							width:'524px',
+							height:'679px',
+							marginLeft:0,
+							marginTop:0,
+							opacity:1
+						},700);
+						$('.i_06_1').animate({
+							marginLeft:'600px',
+							opacity:1
+						},700);
+						break;
+				case 7: 
+						$('.i_07_0, .i_07_1').animate({
+							marginTop:0,
+							opacity:1
+						},700);
+						break;
+				case 8: 
+						$('.i_08_0>img').animate({
+							width:'766px',
+							height:'478px',
+							marginTop:0,
+							marginLeft:0,
+							opacity:1
+						},700);
+						$('.i_08_1>img').animate({
+							width:'444px',
+							height:'424px',
+							marginTop:0,
+							marginLeft:0,
+							opacity:1
+						},700);
+						break;
+			}
+		}
+
+		//	滾動動畫序列
+		var scrollAnimation = function(crr,pre){
+			$('.i-page').removeClass("crr-page");
+			$('.i-page').eq(crr - 1).addClass("crr-page");
+			items.animate({'top': (crr * -h)},500,function(){
+				resetPrePage(pre);
+				if(crr == 0){
+					$('.arrow-next').show();
+					$('#page-wrap, .arrow-top').hide();
+				}else if(crr == (amount - 1)){
+					$('#page-wrap, .arrow-top').show();
+					$('.arrow-next').hide();
+				}else{
+					$('#page-wrap, .arrow-next').show();
+					$('.arrow-top').hide();
+				}
+				itemsTop = parseInt(items.css('top'));
+				callbackAnimation(crr);
+			});
+		}
+
+
+		var photoData = [{
+							'title':'客户节培训与协助',
+							'color':'yellow',
+							'photo':[{
+										'title':'客户节',
+										'src':'intro4-1.png',
+										'des':'2015.06.11客户节培训'
+									},{
+										'title':'培训',
+										'src':'intro4-2.png',
+										'des':'2015.06.11客户节培训'
+									},{
+										'title':'协助',
+										'src':'intro4-3.png',
+										'des':'2015.06.11客户节培训'
+									}]
+						},{
+							'title':'荣药商学院',
+							'color':'purple',
+							'photo':[{
+										'title':'商学院',
+										'src':'introphoto4-0.JPG',
+										'des':'2017.01.15公司组织大家一起去长隆游玩，公司员工与家属都玩得其乐融融'
+									},{
+										'title':'商学院',
+										'src':'introphoto4-1.JPG',
+										'des':'2017.01.15公司组织大家一起去长隆游玩，公司员工与家属都玩得其乐融融'
+									},{
+										'title':'商学院',
+										'src':'introphoto4-2.JPG',
+										'des':'2017.01.15公司组织大家一起去长隆游玩，公司员工与家属都玩得其乐融融'
+									},{
+										'title':'商学院',
+										'src':'introphoto4-3.JPG',
+										'des':'2017.01.15公司组织大家一起去长隆游玩，公司员工与家属都玩得其乐融融'
+									},{
+										'title':'商学院',
+										'src':'introphoto4-4.JPG',
+										'des':'2017.01.15公司组织大家一起去长隆游玩，公司员工与家属都玩得其乐融融'
+									}]
+						},{
+							'title':'公司外出活动',
+							'color':'blue',
+							'photo':[{
+										'title':'户外拓展活动',
+										'src':'intro4-3.png',
+										'des':'2015.06.28公司组织大家一起去摘荔枝、野炊以及徒步活动，公司员工与家属都玩得其乐融融'
+									},{
+										'title':'长隆旅游',
+										'src':'intro4-4.png',
+										'des':'2017.01.15公司组织大家一起去长隆游玩，公司员工与家属都玩得其乐融融'
+									},{
+										'title':'日本',
+										'src':'intro4-5.png',
+										'des':'2018.06.28公司组织大家一起去日本游玩，公司员工与家属都玩得其乐融融'
+									},{
+										'title':'月球',
+										'src':'intro4-6.png',
+										'des':'2018.06.28公司组织大家一起去月球游玩，公司员工与家属都玩得其乐融融'
+									}]
+						},{
+							'title':'客户节培训与协助',
+							'color':'yellow',
+							'photo':[{
+										'title':'客户节',
+										'src':'intro4-4.png',
+										'des':'2015.06.11客户节培训'
+									},{
+										'title':'培训',
+										'src':'intro4-5.png',
+										'des':'2015.06.11客户节培训'
+									},{
+										'title':'协助',
+										'src':'intro4-6.png',
+										'des':'2015.06.11客户节培训'
+									}]
+						},{
+							'title':'荣药商学院',
+							'color':'purple',
+							'photo':[{
+										'title':'荣药',
+										'src':'intro4-1.png',
+										'des':'2015.06.28公司组织大家一起去摘荔枝、野炊以及徒步活动，公司员工与家属都玩得其乐融融'
+									},{
+										'title':'商学院',
+										'src':'intro4-2.png',
+										'des':'2017.01.15公司组织大家一起去长隆游玩，公司员工与家属都玩得其乐融融'
+									}]
+						},{
+							'title':'公司外出活动',
+							'color':'blue',
+							'photo':[{
+										'title':'户外拓展活动',
+										'src':'intro4-5.png',
+										'des':'2015.06.28公司组织大家一起去摘荔枝、野炊以及徒步活动，公司员工与家属都玩得其乐融融'
+									},{
+										'title':'长隆旅游',
+										'src':'intro4-1.png',
+										'des':'2017.01.15公司组织大家一起去长隆游玩，公司员工与家属都玩得其乐融融'
+									},{
+										'title':'日本',
+										'src':'intro4-2.png',
+										'des':'2018.06.28公司组织大家一起去日本游玩，公司员工与家属都玩得其乐融融'
+									},{
+										'title':'月球',
+										'src':'intro4-4.png',
+										'des':'2018.06.28公司组织大家一起去月球游玩，公司员工与家属都玩得其乐融融'
+									}]
+						},{
+							'title':'客户节培训与协助',
+							'color':'yellow',
+							'photo':[{
+										'title':'客户节',
+										'src':'intro4-6.png',
+										'des':'2015.06.11客户节培训'
+									},{
+										'title':'培训',
+										'src':'intro4-1.png',
+										'des':'2015.06.11客户节培训'
+									},{
+										'title':'协助',
+										'src':'intro4-3.png',
+										'des':'2015.06.11客户节培训'
+									}]
+						},{
+							'title':'荣药商学院',
+							'color':'purple',
+							'photo':[{
+										'title':'荣药',
+										'src':'intro4-1.png',
+										'des':'2015.06.28公司组织大家一起去摘荔枝、野炊以及徒步活动，公司员工与家属都玩得其乐融融'
+									},{
+										'title':'商学院',
+										'src':'intro4-2.png',
+										'des':'2017.01.15公司组织大家一起去长隆游玩，公司员工与家属都玩得其乐融融'
+									}]
+						},{
+							'title':'公司外出活动',
+							'color':'blue',
+							'photo':[{
+										'title':'户外拓展活动',
+										'src':'intro4-3.png',
+										'des':'2015.06.28公司组织大家一起去摘荔枝、野炊以及徒步活动，公司员工与家属都玩得其乐融融'
+									},{
+										'title':'长隆旅游',
+										'src':'intro4-1.png',
+										'des':'2017.01.15公司组织大家一起去长隆游玩，公司员工与家属都玩得其乐融融'
+									},{
+										'title':'日本',
+										'src':'intro4-5.png',
+										'des':'2018.06.28公司组织大家一起去日本游玩，公司员工与家属都玩得其乐融融'
+									},{
+										'title':'月球',
+										'src':'intro4-1.png',
+										'des':'2018.06.28公司组织大家一起去月球游玩，公司员工与家属都玩得其乐融融'
+									}]
+						}];
+
+
+		for(var i = 0; i < photoData.length; i++){
+			$('.i_09').find('li').eq(i).append(
+				"<img class='thumbtack-s' src='http://file.ry600.com//snapshot/vms/site/di/di70684438lrfavs/du9sks0f7yefy23z/image//thumbtack-l-" + photoData[i].color + ".png'/>"
+				+ "<div class='photo-s'><img src='http://file.ry600.com//snapshot/vms/site/di/di70684438lrfavs/du9sks0f7yefy23z/image//" + photoData[i].photo[0].src + "'/></div>"
+				+ "<b class='title-s'>" + photoData[i].title + "</b>"
+				+ "<b class='photo-amount'>" + photoData[i].photo.length + "张</b>"
+			);
+		}
+
+		$('.i_09').find('li').click(function(){
+			isModal = true;
+			showPhoto($(this).index());
+			$('.i_09-modal').show();
+		});
+
+		$('.close').click(function(){
+			$('.i_09-modal').hide();
+			clearInterval(photoInterval);
+			clearTimeout(changePageTimeout);
+			$('.photo').stop();
+			$('.photo-page').unbind();
+			isModal = false;
+		});
+
+		var photo,photosLi;
+		var crrPhoto = 0,
+			nextPhoto = 1;
+		var showPhoto = function(idx){
+			$('.photos, .photo-pages, .txt-cnt, .photos-title').empty();
+			var pt = photoData[idx].photo;
+			$('.photos-title').html(photoData[idx].title);
+			$('.thumbtack-l').html("<img src='http://file.ry600.com//snapshot/vms/site/di/di70684438lrfavs/du9sks0f7yefy23z/image//thumbtack-l-" + photoData[idx].color + ".png'/>")
+			$('.photo-pages').css({
+				width:(pt.length * 45 + 3)
+			});
+			for(var i = 0; i < pt.length; i++){
+				$('.photos').append("<li><img class='photo' src='http://file.ry600.com//snapshot/vms/site/di/di70684438lrfavs/du9sks0f7yefy23z/image//" + pt[i].src + "'/></li>");
+				var sec = (i == 0 ? "photo-page-sec" : " ");
+				$('.photo-pages').append("<li class='photo-page " + sec + "'></li>");
+				var isShow = (i == 0 ? "block" : "none");
+				$('.txt-cnt').append("<li style='display:" + isShow + ";'><div class='photo-title'>" + pt[i].title +"</div><div class='photo-dec'>" + pt[i].des + "</div></li>");
+			}
+
+			photosLi = $('.photos').find('li');
+			photo = $('.photo');
+
+			$('.photo-page').on('click',function(){
+				photo.stop().css({
+					width:'567px',
+					height:'456px',
+					marginLeft:0,
+					marginTop:0
+				});
+
+				clearTimeout(changePageTimeout);
+				clearInterval(photoInterval);
+
+				crrPhoto = $(this).index();
+				$('.photo-page').removeClass('photo-page-sec');
+				$(this).addClass('photo-page-sec');
+				$('.txt-cnt>li').hide().eq(crrPhoto).show();
+				photoAnimation();
+				photoInterval = setInterval(photoAnimation,9500);
+
+			});
+			photoSalce();
+		}
+		var photoInterval;
+		var changePageTimeout;
+		var photoSalce = function(){
+			crrPhoto = 0;
+			clearInterval(photoInterval);
+			photoAnimation();
+			photoInterval = setInterval(photoAnimation,8500);
+		}
+
+		var photoAnimation = function(){
+			crrPhoto = (crrPhoto < photo.length) ? crrPhoto : 0;
+			nextPhoto = (crrPhoto == (photo.length - 1)) ? 0 : (crrPhoto + 1);
+			photosLi.css({
+				zIndex:5
+			});
+			photosLi.eq(crrPhoto).css({
+				zIndex:15
+			});
+			photosLi.eq(nextPhoto).css({
+				zIndex:10
+			});
+			photo.css({
+				opacity:1
+			});
+			clearTimeout(changePageTimeout);
+			changePageTimeout = setTimeout(function(){
+				$('.photo-page').removeClass('photo-page-sec').eq(nextPhoto).addClass('photo-page-sec');
+				$('.txt-cnt>li').hide().eq(nextPhoto).show();
+			},8300);
+			photo.eq(crrPhoto).stop().animate({
+				opacity:1
+			},400,function(){	
+				$(this).animate({
+					width:'789px',
+					height:'567px',
+					marginTop:'-50px',
+					marginLeft:'-60px'
+				},7000,'linear',function(){
+					$(this).animate({
+					width:'889px',
+					height:'667px',
+					marginTop:'-100px',
+					marginLeft:'-110px',
+					opacity:0
+					},1000,'linear',function(){
+						$(this).parent().css({
+							zIndex:5
+						});
+						$(this).css({
+							width:'567px',
+							height:'456px',
+							marginLeft:0,
+							marginTop:0
+						});
+					});
+				});
+			});
+			crrPhoto++;
+		}
+
+		//彈出框阻止鼠標滑輪、鍵盤事件
+	</script>
+</body>
+</html>
