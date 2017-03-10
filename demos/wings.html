@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+		*{
+			margin:0;
+			padding:0;
+		}
+		html,body{
+			width: 100%;
+			height: 100%;
+			overflow: hidden;
+		}
+		#wings-dynamic{
+			width: 1920px;
+			height: 9600px;
+			margin-left: -960px;
+			margin-top: -30px;
+			left: 50%;
+			position: absolute;
+			/*display: none;*/
+			z-index: 18;
+			min-width: 1300px;
+			min-height: 800px;
+		}
+		#wings-static{
+			width: 1920px;
+			height: 960px;
+			position: absolute;
+			background-image: url(http://file.ry600.com//snapshot/vms/site/di/di70684438lrfavs/du9sks0f7yefy23z/image//wbwingsstatic.png);
+			background-repeat: no-repeat;
+			background-size: contain;
+			background-position: center 0;
+			z-index: 17;
+			min-width: 1300px;
+			min-height: 800px;
+			display: none;
+			bottom: 0;
+		}
+		.wbbg{
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			background-image: url(http://file.ry600.com//snapshot/vms/site/di/di70684438lrfavs/du9sks0f7yefy23z/image//wbbg.jpg);
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center 0;
+			min-width: 1300px;
+			min-height: 600px;
+		}
+		.wbcity{
+			width: 100%;
+			height: auto;
+			position: absolute;
+			bottom: 0;
+			z-index: 22;
+		}
+		.column{
+			background-image: url(http://file.ry600.com//snapshot/vms/site/di/di70684438lrfavs/du9sks0f7yefy23z/image//wbcolumn.png);
+			background-repeat: no-repeat;
+			background-position: center 0;
+			background-size: cover;
+		}
+		.water{
+			width: 100%;
+			height: 30%;
+			padding-bottom: 30px;
+			position: absolute;
+			background-image: url(http://file.ry600.com//snapshot/vms/site/di/di70684438lrfavs/du9sks0f7yefy23z/image//wbwater.png);
+			background-position: center 0;
+			background-size: cover;
+			background-repeat: no-repeat;
+			bottom: 0;
+			z-index: 2;
+		}
+		.column-pic{
+			max-width: 310px;
+			width: auto;
+			max-height: 720px;
+			min-height: 500px;
+			height: 100%;
+			position: absolute;
+			bottom: 0;
+		}
+		.wbpeople{
+			display: block;
+			width: 30%;
+			height: auto;
+			position: relative;
+			margin:0 auto;
+		}
+		.people-wrap{
+			width: 100%;
+			position: absolute;
+			height: auto;
+			bottom: 8%;
+			z-index: 25;
+		}
+		.column-wrap{
+			width: 100%;
+			position: absolute;
+			height: 66%;
+			bottom: 13%;
+			z-index: 20;
+		}
+		.column{
+			position: relative;
+			margin: 0 auto;
+			width: auto;
+			max-width: 310px;
+			height: 100%;
+		}
+		.wbtop{
+			width: 980px;
+			height: 121px;
+			margin-left: -490px;
+			left: 50%;
+			top: 0;
+			position: absolute;
+			z-index: 9;
+		}
+		.wbtop div{
+			width: 336px;
+			height: 121px;
+			float: left;
+			background-image: url(http://file.ry600.com//snapshot/vms/site/di/di70684438lrfavs/du9sks0f7yefy23z/image//wblogo.png);
+		}
+		.wbtop p{
+			float: right;
+			font-family: "Microsoft YaHei";
+			font-size: 60px;
+			font-weight: bold;
+			line-height: 120px;
+			color: rgb(47,101,183);
+		}
+		li{
+			list-style: none;
+		}
+		.column-text{
+			width: 100%;
+			height: 100%;
+			position: relative;
+		}
+		.column-text>li{
+			width: 160px;
+			height: 40px;
+			margin-left: -160px;
+			position: absolute;
+			bottom: 0;
+			margin-bottom: -5px;
+		}
+		i,b{
+			font-style: normal;
+		}
+		.column-text>li span i, .column-text>li span span{
+			display: block;
+			font-family: "Microsoft YaHei";
+			font-size: 25px;
+			font-weight: bold;
+			line-height: 25px;
+			height: 30px;
+			float: left;
+		}
+		.column-text>li span span{
+			color: rgb(230,90,35);
+		}
+		.column-text>li>span{
+			display: block;
+			position: absolute;
+			margin-top: 5px;
+		}
+		.column-text>li span i{
+			color: rgb(222,62,62);
+		}
+		.column-text>li b{
+			font-family: "Microsoft YaHei";
+			font-size: 22px;
+			height: 30px;
+			color: #FF9600;
+			position: absolute;
+			right: 0;
+		}
+		.column-text>li p{
+			font-family: "Microsoft YaHei";
+			position: absolute;
+			font-size: 30px;
+			height: 30px;
+			margin-top: 10px;
+			right: 0;
+			color: #FF9600;
+			font-weight: bold;
+			width: 15px;
+			overflow: hidden;
+		}
+		.wbmedicine{
+			width: auto;
+			height: 18%;
+			position: relative;
+			left: 60%;
+			top: 30%;
+			z-index: 20;
+		}
+	</style>
+</head>
+<body>
+	<div class="wbbg">
+		<div class="wbtop">
+			<div></div>
+			<p>万邦第二届《客户节》</p>
+		</div>
+		<img class="wbcity" src="http://file.ry600.com//snapshot/vms/site/di/di70684438lrfavs/du9sks0f7yefy23z/image//wbcity.png"/>
+		<div id="wings-dynamic">
+			<object>
+				<embed loop="-1" width="1920" height="1080" wmode="transparent" src="http://rypublish.oss-cn-shenzhen.aliyuncs.com/wings.swf"> 
+			</object>
+		</div>
+		<div id="wings-static"></div>
+		<div class="column-wrap">
+			<div class="column">
+				<div class="water"></div>
+				<ul class="column-text">
+					<li>
+						<span><i>满10</i><span>换1</span></span>
+						<b>30%</b>
+						<p>—</p>
+					</li>
+					<li>
+						<span><i>满10</i><span>换2</span></span>
+						<b>50%</b>
+						<p>—</p>
+					</li>
+					<li>
+						<span><i>满10</i><span>换3</span></span>
+						<b>80%</b>
+						<p>—</p>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="people-wrap">
+			<img class="wbpeople" src="http://file.ry600.com//snapshot/vms/site/di/di70684438lrfavs/du9sks0f7yefy23z/image//wbpeople.png"/>
+		</div>
+		<img class="wbmedicine" src="http://file.ry600.com//snapshot/vms/site/di/di70684438lrfavs/du9sks0f7yefy23z/image//wbdrag.png">
+	</div>
+	<script src="../lib/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			adapt();
+			$(window).resize(adapt);
+		});
+
+		var w,h,columnHeight;
+		//	自適應窗口大小
+		var adapt = function(){
+			w = $(window).width();
+			h = $(window).height();
+			$('.wbbg, #wings-dynamic>object>embed, #wings-static').css({
+				width:w,
+				height:h
+			});
+			$('#wings-dynamic').css({
+				width:w,
+				height:h,
+				marginLeft:(-w/2)
+			});
+			columnHeight = $('.column-wrap').height();
+			$('.column-text').find('li').eq(0).css({
+				bottom:(columnHeight * 0.3)
+			});
+			columnHeight = $('.column-wrap').height();
+			$('.column-text').find('li').eq(1).css({
+				bottom:(columnHeight * 0.5)
+			});
+			columnHeight = $('.column-wrap').height();
+			$('.column-text').find('li').eq(2).css({
+				bottom:(columnHeight * 0.8)
+			});
+			if(w < 1590){
+				$('.column').css({
+					width:(682 * 0.65 * (310 / 682))
+				});
+			}else{
+				$('.column').css({
+					width:682
+				});
+			}
+		}
+	</script>
+</body>
+</html>
