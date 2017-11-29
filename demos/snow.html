@@ -15,13 +15,19 @@
 			var isOn = false;
 			$('.switch').on('click', function(){
 				if($(this).hasClass('stop')){
-					clearTimeout(tt1);
-					isOn = false;
+					stop();
 				}else if(!isOn){
-					isOn = true;
-					snow($("body"),pic,300,5000,900);
+					start();
 				}
 			});
+			function start(){
+				isOn = true;
+				snow($("body"),pic,300,5000,900);
+			}
+			function stop(){
+				clearTimeout(tt1);
+				isOn = false;
+			}
 		});
 		var tt1, tt2;
 		function snow(con,pic,frequence,speed,height){
