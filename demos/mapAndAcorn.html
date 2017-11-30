@@ -175,7 +175,6 @@
 		};
 		// 繪製地圖
 		myChart.setOption(option);
-
 		var province = '西藏';	//默認高亮省份
 		var tt = setInterval(function(){flashing(province);}, 350);	//執行默認省份閃動
 		falling();
@@ -192,7 +191,6 @@
 			});
 			myChart.setOption(op);
 		}
-
 		// 切換省份
 		var switchPr = function(pr){
 			falling();
@@ -210,7 +208,6 @@
 			myChart.setOption(op);
 			tt = setInterval(function(){flashing(province);}, 350);
 		}
-
 		// 綁定省份點擊切換事件
 		myChart.on('click', function(param){switchPr(param.data.name);});
 	</script>
