@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Map and Acorn</title>
+	<script src="https://codersunnylau.github.io/Demos/lib/jquery.min.js"></script>
+	<script src="https://codersunnylau.github.io/Demos/lib/echarts.min.js"></script>
+	<script src="https://codersunnylau.github.io/Demos/lib/china.js"></script>
+	<style>
+		body{
+			background-color:rgb(4, 64, 97);
+		}
+	</style>
+</head>
+<body>
+	<div id="my_map" style="height:650px;"></div>
+	<script>
+		var pic=['https://codersunnylau.github.io/Demos/demos/images/acorn_m.png'];
+		var isOn = false;
+		function start(){
+			isOn = true;
+			snow($("body"),pic,300,5000,900);
+		}
+		function stop(){
+			clearTimeout(tt1);
+			isOn = false;
+		}
+		function falling(){
+			stop();	start(); setTimeout(stop, 3000);
+		}
+		var tt1, tt2;
+		function snow(con,pic,frequence,speed,height){
+			var imgs = new Array(pic.length),
+				complete = 0,
+				conWidth = con.width();
+			var excursion = 0,
+				ww=$(window).width();
+			con.css({"position":"relative"});
+			for(var i = 0; i < pic.length; i++){
+				if(pic[i] != ""){
+					imgs[i] = new Image();
+					imgs[i].src = pic[i];
+					$(imgs[i]).css({"transition":"transform "+speed/1000+"s,width "+speed/1000+"s,height "+speed/1000+"s,left "+speed/1000+"s"});
+					imgs[i].onload=function(){
+						complete++;
+						if(complete==pic.length){
+							timeout(imgs,frequence,speed,height);
+						}
+					}
+				}
+			}
+			function timeout(img,f,s,h){
+				tt1 = setTimeout(function(){
+					var i=parseInt(Math.random()*img.length);
+					var obj=$(img[i]).clone();
+					var size=1-Math.random()*0.6;
+					var wsize=img[i].width*size;
+					var hsize=img[i].height*size;
+					var left=(ww-50)*Math.random();
+					var opacity=1;
+					var rotate=360*(Math.random()*2-1);
+					var zleft=left-excursion*200,zsize=size;
+					if(excursion>0){
+						if(left<ww/2){
+							zsize=size*(1-0.5*excursion);
+						}else{
+							zsize=size*(1+0.5*excursion);
+						}
+					}else{
+						if(left<ww/2){
+							zsize=size*(1-0.5*excursion);
+						}else{
+							zsize=size*(1+0.5*excursion);
+						}
+					}
+					var zwsize=wsize*zsize;
+					var zhsize=hsize*zsize;
+					obj.addClass("float").width(wsize).height(hsize).css({
+						left:left+'px',
+						'will-change':'transform,width,height,left',
+						'transform': 'translate3d(0, 0, 0)',
+						'z-index':999,
+						'pointer-events':'none',
+						'position':'fixed',
+						'top':'-100px',
+						'left':left+"px",
+						'opacity':opacity,
+						'transform':'rotate('+rotate+'deg)'
+					});
+					con.append(obj);
+					obj.animate({
+							top:(h||400)+"px",
+							opacity:0
+						},
+						speed,
+						function(){
+							obj.remove();
+						}).css({
+							"transform":"rotate(0deg)",
+							"width":zwsize+"px",
+							"height":zhsize+"px",
+							"left":zleft+"px"
+						});
+					tt2 = timeout(imgs,(frequence||500)*Math.random(),s,h);
+				},f||500);
+			}
+			if(supportCss3("transition")){
+				var tt;
+				$(window).mousemove(function(e){
+					var clientX=e.clientX;
+					excursion=(clientX-ww/2)/(ww/2);
+					clearTimeout(tt);
+					setTimeout(function(){
+						excursion=0;
+					},3000);
+				});
+			}
+		}
+		function supportCss3(style){
+			var prefix = ['webkit', 'Moz', 'ms', 'o'],
+				i,
+				humpString = [],
+				htmlStyle = document.documentElement.style,
+				_toHumb = function (string) {
+					return string.replace(/-(\w)/g, function ($0, $1) {
+						return $1.toUpperCase();
+					});
+				};
+			for(i in prefix){
+				humpString.push(_toHumb(prefix[i] + '-' + style));
+			}
+			humpString.push(_toHumb(style));
+			for(i in humpString){
+				if (humpString[i] in htmlStyle){
+					return true;
+				}
+			}
+			return false;
+		}
+	</script>
+	<script type="text/javascript">
+		// 在my_map上創建一個myChart對象
+		var myChart = echarts.init(document.getElementById('my_map'));
+		var option = {
+			tooltip: {
+				trigger: 'item',
+				formatter: '{b}'
+			},
+			series: [
+				{
+					name: '中国',
+					type: 'map',
+					mapType: 'china',
+					selectedMode : 'single',
+					label: {
+						normal: {
+							show: false
+						},
+						emphasis: {
+							show: true
+						}
+					},
+					itemStyle: {
+						normal: {
+							areaColor: '#CCC',
+							color: '#000'
+						},
+						emphasis:{
+							areaColor: 'yellow'
+						}
+					}
+				}
+			],
+			backgroundColor: 'rgb(4,64,97)'
+		};
+		// 繪製地圖
+		myChart.setOption(option);
+
+		var province = '西藏';	//默認高亮省份
+		var tt = setInterval(function(){flashing(province);}, 350);	//執行默認省份閃動
+		falling();
+		// 閃動函數
+		var flashing = function(pr){
+			var op = myChart.getOption();
+			var data = op.series[0].data;
+			data.some(function(item, index){
+				if(item.name == pr){
+					item.selected = !item.selected;
+				}else{
+					item.selected = false;
+				}
+			});
+			myChart.setOption(op);
+		}
+
+		// 切換省份
+		var switchPr = function(pr){
+			falling();
+			clearInterval(tt);
+			var op = myChart.getOption();
+			var data2 = op.series[0].data;
+			province = pr;
+			data2.some(function(item, index){
+				if(item.name == province){
+					item.selected = true;
+				}else{
+					item.selected = false;
+				}
+			});
+			myChart.setOption(op);
+			tt = setInterval(function(){flashing(province);}, 350);
+		}
+
+		// 綁定省份點擊切換事件
+		myChart.on('click', function(param){switchPr(param.data.name);});
+	</script>
+</body>
+</html>
