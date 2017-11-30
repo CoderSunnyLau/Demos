@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Map of China and Province flashing</title>
+	<script src="../lib/echarts.min.js"></script>
+	<script src="../lib/china.js"></script>
+</head>
+<body>
+	<div id="my_map" style="height:400px;"></div>
+	<script type="text/javascript">
+		// 在my_map上創建一個myChart對象
+		var myChart = echarts.init(document.getElementById('my_map'));
+		var option = {
+			tooltip: {
+				trigger: 'item',
+				formatter: '{b}'
+			},
+			series: [
+				{
+					name: '中国',
+					type: 'map',
+					mapType: 'china',
+					selectedMode : 'single',
+					label: {
+						normal: {
+							show: false
+						},
+						emphasis: {
+							show: true
+						}
+					},
+					itemStyle: {
+						normal: {
+							areaColor: '#CCC',
+							color: '#000'
+						},
+						emphasis:{
+							areaColor: 'yellow'
+						}
+					}
+				}
+			],
+			backgroundColor: 'rgb(4,64,97)'
+		};
+		// 繪製地圖
+		myChart.setOption(option);
+
+		var province = '西藏';	//默認高亮省份
+		var tt = setInterval(function(){flashing(province);}, 350);	//執行默認省份閃動
+
+		// 閃動函數
+		var flashing = function(pr){
+			var op = myChart.getOption();
+			var data = op.series[0].data;
+			data.some(function(item, index){
+				if(item.name == pr){
+					item.selected = !item.selected;
+				}else{
+					item.selected = false;
+				}
+			});
+			myChart.setOption(op);
+		}
+
+		// 切換省份
+		var switchPr = function(pr){
+			clearInterval(tt);
+			var op = myChart.getOption();
+			var data2 = op.series[0].data;
+			province = pr;
+			data2.some(function(item, index){
+				if(item.name == province){
+					item.selected = true;
+				}else{
+					item.selected = false;
+				}
+			});
+			myChart.setOption(op);
+			tt = setInterval(function(){flashing(province);}, 350);
+		}
+
+		// 綁定省份點擊切換事件
+		myChart.on('click', function(param){switchPr(param.data.name);});
+	</script>
+</body>
+</html>
