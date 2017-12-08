@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>test</title>
+</head>
+<body>
+	<div>
+		<div class="el" style="color:red;">11111</div>
+		<div class="el" style="display:none;color:blue;">22222</div>
+		<div class="el" style="display:none;color:green;">33333</div>
+	</div>
+	<script src="../lib/jquery.min.js"></script>
+	<script type="text/javascript">
+		var i = 0;
+		var showHide = function(className){
+			var tt = setTimeout(function(){
+				className.eq(i).hide();
+				className.eq(i + 1).show();
+				clearTimeout(tt);
+				i++;
+				if(i < 2){
+					showHide(className);
+				}
+			}, 3000);
+		}
+		showHide($('.el'));
+	</script>
+</body>
+</html>
