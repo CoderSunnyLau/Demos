@@ -8,22 +8,27 @@
 		<div class="el" style="color:red;">11111</div>
 		<div class="el" style="display:none;color:blue;">22222</div>
 		<div class="el" style="display:none;color:green;">33333</div>
+		<div class="el1" style="color:red;">33333</div>
+		<div class="el1" style="display:none;color:blue;">22222</div>
+		<div class="el1" style="display:none;color:green;">11111</div>
 	</div>
 	<script src="../lib/jquery.min.js"></script>
 	<script type="text/javascript">
-		var i = 0;
-		var showHide = function(className){
-			var tt = setTimeout(function(){
-				className.eq(i).hide();
-				className.eq(i + 1).show();
-				clearTimeout(tt);
-				i++;
-				if(i < 2){
-					showHide(className);
+		var i = [0, 0];
+		var tt = [];
+		var showHide = function(j, className){
+			tt[j] = setTimeout(function(){
+				className.eq(i[j]).hide();
+				className.eq(i[j] + 1).show();
+				clearTimeout(tt[j]);
+				i[j]++;
+				if(i[j] < 2){
+					showHide(j, className);
 				}
 			}, 3000);
 		}
-		showHide($('.el'));
+		showHide(0, $('.el'));
+		showHide(1, $('.el1'));
 	</script>
 </body>
 </html>
