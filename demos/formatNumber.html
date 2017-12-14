@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>formatNumber</title>
+	<style type="text/css">
+		.box{
+			text-align: center;
+			line-height: 40px;
+		}
+		.num_box{
+			width: 300px;
+			height: 100px;
+			line-height: 100px;
+			text-align: center;
+			font-size: 30px;
+			font-weight: bold;
+			color: deeppink;
+			border: 2px dashed deeppink;
+			margin: 50px auto 10px;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<div class="num_box">1,000</div>
+		<div>請輸入您想格式化的數字</div>
+		<input type="number" id="num" value="1000"><button id="set_btn">確定</button>
+	</div>
+	<script src="../lib/jquery.min.js"></script>
+	<script type="text/javascript">
+		var formatNum = function(num){
+			var arr = [],
+				deg = "";
+			num = num + "";
+			if(num.indexOf('.') > -1){
+				deg = "." + num.split('.')[1];
+				num = num.split('.')[0];
+			}
+			for(var l = num.length, i = 0; i < l; i++){
+				arr.push(num[(l - 1) - i]);
+				if((i + 1 ) % 3 == 0 && i < (l -1)){
+					arr.push(",");
+				}
+			}
+			return (arr.reverse().join("") + deg);
+		}
+		$('#set_btn').click(function(){
+			val = $('#num').val();
+			$('.num_box').html(formatNum(val));
+		});
+	</script>
+</body>
+</html>
