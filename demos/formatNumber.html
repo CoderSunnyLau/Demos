@@ -24,11 +24,15 @@
 	<div class="box">
 		<div class="num_box">1,000</div>
 		<div>請輸入您想格式化的數字</div>
-		<input type="number" id="num" value="1000"><button id="set_btn">確定</button>
+		<input type="text" id="num" value="1000" maxlength="10"><button id="set_btn">確定</button>
 	</div>
 	<script src="../lib/jquery.min.js"></script>
 	<script type="text/javascript">
 		var formatNum = function(num){
+			if(isNaN(num)){
+				alert("請輸入數字");
+				return "";
+			}
 			var arr = [],
 				deg = "";
 			num = num + "";
@@ -46,8 +50,16 @@
 		}
 		$('#set_btn').click(function(){
 			val = $('#num').val();
-			$('.num_box').html(formatNum(val));
+			val = formatNum(val);
+			$('.num_box').html(val);
+			$('#num').val(val);
 		});
+		var inputLimit = function(el){
+			var val = el.value;
+			if(val.length > 10){
+				el.value = val.slice(0, 10);
+			}
+		}
 	</script>
 </body>
 </html>
