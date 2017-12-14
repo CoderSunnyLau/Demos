@@ -34,19 +34,24 @@
 				return "";
 			}
 			var arr = [],
-				deg = "";
+				deg = ""; //小數部分
 			num = num + "";
-			if(num.indexOf('.') > -1){
+			if(num.indexOf('.') > -1){ //判斷是否有小數部分
 				deg = "." + num.split('.')[1];
 				num = num.split('.')[0];
 			}
 			for(var l = num.length, i = 0; i < l; i++){
-				arr.push(num[(l - 1) - i]);
-				if((i + 1 ) % 3 == 0 && i < (l -1)){
+				arr.push(num[(l - 1) - i]); //從最後一位進棧
+				/*
+				* 若本次循環次數(i + 1)為3的倍數，
+				* 且本次循環進棧的元素不是最高位數時，進棧一個逗號。
+				*（若是最高位，則會在首位添加逗號，如“,100”）
+				*/
+				if((i + 1 ) % 3 == 0 && (i + 1) < l)){
 					arr.push(",");
 				}
 			}
-			return (arr.reverse().join("") + deg);
+			return (arr.reverse().join("") + deg); //倒序輸出目標值
 		}
 		$('#set_btn').click(function(){
 			val = $('#num').val();
