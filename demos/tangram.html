@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tangram</title>
+	<style type="text/css">
+		#cvs{
+			margin: 50px auto;
+			border: 1px solid #DDD;
+			display: block;
+		}
+	</style>
+</head>
+<body>
+	<canvas id="cvs" width="1024" height="768">當前瀏覽器不支持Canvas，請更換瀏覽器後再試。</canvas>
+	<script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
+	<script type="text/javascript">
+		var tangram = [
+			{p:[{x:0,y:0}, {x:800,y:0}, {x:400,y:400}], color:"#caff67"},
+			{p:[{x:0,y:0}, {x:400,y:400}, {x:0, y:800}], color:"#67becf"},
+			{p:[{x:800,y:0}, {x:800,y:400}, {x:600,y:600}, {x:600,y:200}], color:"#ef3d61"},
+			{p:[{x:600,y:200}, {x:600,y:600}, {x:400,y:400}], color:"#f9f51a"},
+			{p:[{x:400,y:400}, {x:600,y:600}, {x:400,y:800}, {x:200,y:600}], color:"#a594c0"},
+			{p:[{x:200,y:600}, {x:400,y:800}, {x:0,y:800}], color:"#fa8ecc"},
+			{p:[{x:800,y:400}, {x:800,y:800}, {x:400,y:800}], color:"#f6ca29"}
+		];
+		window.onload = function(){
+			var cvs = document.getElementById("cvs");
+			var cxt = cvs.getContext("2d");
+
+			for(var i = 0; i < tangram.length; i++){
+				draw(tangram[i], cxt);
+			}
+
+			function draw(t, cxt){
+				cxt.beginPath();
+				cxt.moveTo(t.p[0].x, t.p[0].y);
+				for(var i = 1; i < t.p.length; i++){
+					cxt.lineTo(t.p[i].x, t.p[i].y);
+				}
+				cxt.closePath();
+				cxt.fillStyle = t.color;
+				cxt.fill();
+			}
+		}
+	</script>
+</body>
+</html>
