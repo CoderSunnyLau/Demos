@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pentagram</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		body{
+			padding: 20px;
+		}
+		.select{
+			cursor: pointer;
+		}
+		.options{
+			display: none;
+			width: 100px;
+			border: 1px solid #DDD;
+			background-color: #EEE;
+		}
+		.option{
+			line-height: 30px;
+			list-style-type: none;
+			cursor: pointer;
+		}
+		.active{
+			background-color: deeppink;
+			color: #FFF;
+		}
+	</style>
+</head>
+<body>
+	<div class="select">点击选择</div>
+	<ul class="options">
+		<li class="option">aaa</li>
+		<li class="option">bbb</li>
+		<li class="option">ccc</li>
+	</ul>
+	<script src="../lib/jquery.min.js"></script>
+	<script type="text/javascript">
+		var select = $(".select");
+		var options = $(".options");
+		var option = $(".option");
+		select.click(function(){
+			if(options.css("display") == "none"){
+				options.show();
+			}else{
+				options.hide();
+			}
+		});
+		option.hover(function() {
+			$(this).addClass("active");
+		}, function() {
+			$(this).removeClass("active");
+		});
+	</script>
+</body>
+</html>
