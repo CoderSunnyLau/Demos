@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="https://codersunnylau.github.io/Demos/lib/jquery.min.js"></script>
+	<style type="text/css">
+		.level{
+			padding-left: 50px;
+		}
+	</style>
+</head>
+<body>
+	<ul class="level l1">
+		<li>
+			<div><input type="checkbox" name="">11</div>
+			<ul class="level l2">
+				<li>
+					<div><input type="checkbox" name="">21</div>
+					<ul class="level l3">
+						<li><div><input type="checkbox" name="">31</div></li>
+						<li>
+							<div><input type="checkbox" name="">32</div>
+							<ul class="level l4">
+								<li>
+									<div><input type="checkbox" name="">41</div>
+								</li>
+							</ul>
+						</li>
+						<li><div><input type="checkbox" name="">33</div></li>
+						<li><div><input type="checkbox" name="">34</div></li>
+						<li><div><input type="checkbox" name="">35</div></li>
+					</ul>
+				</li>
+				<li>
+					<div><input type="checkbox" name="">22</div>
+					<ul class="level l3">
+						<li><div><input type="checkbox" name="">31</div></li>
+						<li><div><input type="checkbox" name="">32</div></li>
+						<li><div><input type="checkbox" name="">33</div></li>
+						<li><div><input type="checkbox" name="">34</div></li>
+						<li><div><input type="checkbox" name="">35</div></li>
+					</ul>
+				</li>
+			</ul>
+		</li>
+		<li>
+			<div><input type="checkbox" name="">12</div>
+			<ul class="level l2">
+				<li>
+					<div><input type="checkbox" name="">21</div>
+					<ul class="level l3">
+						<li><div><input type="checkbox" name="">31</div></li>
+						<li><div><input type="checkbox" name="">32</div></li>
+						<li><div><input type="checkbox" name="">33</div></li>
+						<li><div><input type="checkbox" name="">34</div></li>
+						<li><div><input type="checkbox" name="">35</div></li>
+					</ul>
+				</li>
+			</ul>
+		</li>
+	</ul>
+	<script type="text/javascript">
+		$("input").click(function(e){
+			var v = $(this).is(":checked");
+			// console.log($(this).closest("li").find(".level input").attr("checked"), v);
+			$(this).closest("li").find(".level input").prop("checked", v);
+			if(v){
+				checkFn($(this));
+			}else{
+				cancelFn($(this));
+			}
+		});
+		function checkFn(el){
+			var pel = el.closest(".level").prev().find("input");
+			if(pel.length){
+				var pli = el.closest(".level").children("li").find("input");
+				// console.log(pel, pli);
+				var pcheck = true;
+				for(var i = 0; i < pli.length; i++){
+					if(!pli.eq(i).is(":checked")){
+						pcheck = false;
+						break;
+					}
+				}
+				pel.prop("checked", pcheck);
+				if(pel.closest(".level").prev().find("input").length){
+					checkFn(pel);
+				}
+			}
+		}
+		function cancelFn(el){
+			var pel = el.closest(".level").prev().find("input");
+			if(pel.length){
+				pel.prop("checked", false);
+				if(pel.closest(".level").prev().find("input").length){
+					cancelFn(pel);
+				}
+			}
+		}
+	</script>
+</body>
+</html>
